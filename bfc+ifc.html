@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> BFC + IFC </title>
+    </head>
+    <body>
+        
+        <div style="width:500px">
+          HELLO
+          <span>
+            WORLD
+            <div style="background:red">a</div>
+          </span>
+          !!
+        </div>
+        <!--
+            돔의 구조와 ifc, bfc 작동은 전혀 상관없다.
+            렌더링 시트템은 그렇게 작동하지 않는다.
+            
+        -->
+
+        <br>
+
+        <div style="width:500px">
+          **
+          <span>
+            HELLO
+            <span>WORLD
+              <div style="background:red">a</div>
+            </span>
+            !!
+            <div style="background:blue">b</div>
+          </span>
+            **
+       </div>
+        
+        <!--
+          렌더링 시스템과 돔의 구조를 분리해서 생각해볼 필요가 있음
+          ifc가 bfc가 어떻게 그림을 그려가는지 순서가 중요
+        -->
+    </body>
+</html>
