@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> IFC </title>
+    </head>
+    <body>
+        
+        <div style="width:200px;background:red">
+          <!-- div안에 아무것도 건들지 않으면 overflow 속성의 기본값은 auto
+               모든 브라우저 auto의 기본값은 visible 초과하는 방향으로 보이게 되어있음
+          -->
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </div>
+
+        <br>
+
+        <div style="width:200px;background:red">
+            <!--
+                그런데 한줄씩 끊어보면 초과하지 않고 밑으로 내려간다.
+                
+                똑같이 overflow visible인데
+
+                상단 ifc는 넘치고 하단 ifc는 너비만큼 끊는데 성공 
+                이는 텍스트 노드에 대한 규정이 있음
+
+                기본적으로 텍스트 노드를 만나면 텍스트 노드에 포함되어 있는 공백문자, 탭, 페이지엔터등
+                거기에 걸리면 인라인 영역의 암묵적인 영역으로 나눠주게 됨
+                이 텍스트 노드들은 별도의 엘리먼트 비슷한 태그가 됨
+
+                ifc 입장에서는 세개의 span태그로 봄
+                ifc는 해당 디비전의 남은 너비에 다음 문자열을 못 넣을 것 같으니
+                다음줄에 넣어야지라는 일반적인 ifc의 알고리즘이 발동
+            -->
+            aaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaa
+            aaaaaaaa
+        </div>
+
+    </body>
+</html>
