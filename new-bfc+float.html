@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> NEW BFC + FLOAT </title>
+    </head>
+    <body>
+        
+        <div style="width:500px">
+            
+            <div style="height:50px;background:red"></div>
+
+            <!-- float가 나오는 시점에 새로운 bfc가 시작-->
+            <div style="width:200px;height:150px;  float:left;  background:rgba(0,255,0,0.5)"></div>
+             
+            <div style="height:50px;background:skyblue"></div>
+
+        </div>
+
+    </body>
+</html>
